@@ -30,9 +30,9 @@ function DisplayStyle(tag, Display, DisplayDirec, JustifyContent, FlexWrap) {
 // DisplayStyle(div,"flex","","center")
 // 속성이 중간에 안넣는 경우엔 ""을 해주면 됨.
 
-function Backgound(tag, BackgroundColor, BackgroundImage, BackgroundSize, BackgroundPosition) {
+function Background(tag, BackgroundColor, BackgroundImage, BackgroundSize, BackgroundPosition) {
   if (BackgroundColor !== undefined) {
-    tag.style.backgoundColor = BackgroundColor;
+    tag.style.backgroundColor = BackgroundColor;
   }
   if (BackgroundImage !== undefined) {
     tag.style.backgroundImage = BackgroundImage;
@@ -45,7 +45,7 @@ function Backgound(tag, BackgroundColor, BackgroundImage, BackgroundSize, Backgr
   }
 }//배경설정
 
-function FontStyle(tag, FontFamily, FontSize, Color, FontWeight) {
+function FontStyle(tag, FontFamily, FontSize, Color, FontWeight, TextAlign, TextDecoration) {
   if (FontFamily !== undefined) {
     tag.style.fontFamily = FontFamily;
   }
@@ -56,6 +56,21 @@ function FontStyle(tag, FontFamily, FontSize, Color, FontWeight) {
     tag.style.color = Color;
   } if (FontWeight !== undefined) {
     tag.style.fontWeight = FontWeight;
+  } if (TextAlign !== undefined) {
+    tag.style.textAlign = TextAlign;
+  } if (TextDecoration !== undefined) {
+    tag.style.textDecoration = TextDecoration;
   }
 }//폰트설정
 
+function SpaceStyle(tag, Border, Margin,Padding,OverFlow) {
+  if (Border !== undefined) {
+    tag.style.border = Border;
+  } if (Margin !== undefined) {
+    tag.style.margin = Margin;
+  } if(Padding!==undefined){
+    tag.style.padding=Padding;
+  } if (OverFlow!==undefined){
+    tag.style.overflow=OverFlow;
+  }
+}//보더, 마진, 패딩, 오버플로워 설정
